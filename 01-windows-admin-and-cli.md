@@ -28,3 +28,19 @@ netstat -anob
 
 :: Perform DNS lookup against default or custom resolver
 nslookup tryhackme.com 8.8.8.8
+:: List running processes with PIDs and memory footprint
+tasklist
+
+:: Force terminate a process and its child subprocesses by PID
+taskkill /pid <PID> /f /t
+
+:: Scan and repair corrupted Windows system binaries using local cache
+sfc /scannow
+
+:: Audit volume errors (/f = fix logical errors, /r = scan bad sectors)
+chkdsk C: /f /r
+:: Trace router pathing via incrementing ICMP Time-To-Live (TTL) values
+tracert <target_ip>
+
+:: Immediate force reboot
+shutdown /r /t 0
